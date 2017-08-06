@@ -3,33 +3,16 @@ import styles from './styles/styles.scss';
 
 import angular from 'angular';
 
-const appModule = angular.module('webpack-tutorial', ['ui.router']);
+// making sure my files load so we need to import each module here.
+import homeModule from './components/home';
+import routerHelper from './services/router-helper/router-helper.service';
 
-import template from './components/home/home.html';
+const appModule = angular
+	.module('webpack-tutorial', [
+		'ui.router',
+		'wt-home'
+	]);
 
-'ngInject';
-
-appModule.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
-    $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise("/");
-
-    $stateProvider.state({
-        name: 'home',
-        url: '/',
-        component: 'home'
-    });
-});
-
-function HomeController() {
-    this.heading = 'Welcome to Webpack Tutorials';
-}
-
-appModule.controller('HomeController', HomeController);
-
-'ngInject';
-appModule.component('home', {
-    controller: 'HomeController',
-    template: template
-});
+appModule.config(routerHelper);
 
 export default appModule;

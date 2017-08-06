@@ -1,0 +1,23 @@
+# http://editorconfig.org
+# IDE configurations for improving consistency across development environments
+
+# top-most EditorConfig file in the repository
+root = true
+
+# all files
+[*]
+indent_style = tab
+indent_size = 4
+charset = utf-8
+trim_trailing_whitespace = true
+end_of_line = lf
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+# Matches the exact files either package.json, bower.json, .bowerrc
+# The generated default format for these 'config' files
+[{package.json,bower.json,.bowerrc}]
+indent_style = space
+indent_size = 2
