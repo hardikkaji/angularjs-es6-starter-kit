@@ -13,6 +13,7 @@ const appModule = angular
 		'wt-home'
 	]);
 
+//configuring all routes via `routerHelper`
 appModule.config(routerHelper);
 
 export default appModule;
