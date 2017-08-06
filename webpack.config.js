@@ -6,7 +6,7 @@ const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 
 const config = {
 	entry: {
-		'webpack-tutorial': './src/app.js',
+		'webpack-tutorial': './src/app.module.js',
 		'vendor': [
 			'angular-ui-router',
 			'angular',
@@ -30,18 +30,18 @@ const config = {
 					use: [
 							{
 								loader: "css-loader"
-							}, 
+							},
 							{
 								loader: "sass-loader"
-							}	
+							}
 					]
 				})
 			},
 			// for fixing of loading bootstrap icon files
-			{ test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/, loader: 'url-loader?limit=10000'}, 
+			{ test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/, loader: 'url-loader?limit=10000'},
 			{ test: /\.(eot|ttf)$/, loader: 'file-loader' },
 			{ test: /\.html$/, loader: 'html-loader' }
-		]	
+		]
 	},
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin(), // for mifiying js
@@ -66,4 +66,4 @@ const config = {
 	}
 };
 
-module.exports = config; 
+module.exports = config;

@@ -1,5 +1,12 @@
 // for fixing of loading bootstrap icon files
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
-// loading bootstrap styles
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+/*===========================================
+==== Loading Custom Styles and Variables ====
+=============================================*/
+@import 'vars/typography';
+
+/*===========================================
+========= Loading Bootstrap Styles ==========
+=============================================*/
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
