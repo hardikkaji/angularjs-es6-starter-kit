@@ -1,0 +1,4 @@
+body {
+	// http://stackoverflow.com/questions/14735274/bootstrap-css-hides-portion-of-container-below-navbar-navbar-fixed-top
+	padding-top: $application-body-padding-top; // for fixing navbar-fix-top issue
+}

@@ -5,8 +5,16 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 ==== Loading Custom Styles and Variables ====
 =============================================*/
 @import 'vars/typography';
+@import 'vars/navbar';
+@import 'vars/body';
 
 /*===========================================
 ========= Loading Bootstrap Styles ==========
 =============================================*/
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+/*===========================================
+========= Loading Customize Styles ==========
+=============================================*/
+@import 'elements/navbar';
+@import 'blocks/body';
