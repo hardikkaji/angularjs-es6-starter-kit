@@ -7,11 +7,7 @@ const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const config = {
 	entry: {
 		'webpack-tutorial': './src/app.module.js',
-		'vendor': [
-			'angular-ui-router',
-			'angular',
-			'jquery'
-		]
+		'vendor': './src/vendor.module.js'
 	},
 	output: {
 		filename: 'libs/[name].bundle.js',
