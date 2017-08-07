@@ -3,6 +3,7 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 
 const config = {
 	entry: {
@@ -21,11 +22,14 @@ const config = {
 				loader: ['ng-annotate-loader', 'babel-loader']
 			},
 			{
-				test: /\.scss$/,
+				test: /\.(scss)$/,
 				use: ExtractTextWebpackPlugin.extract({
 					use: [
 							{
-								loader: "css-loader"
+								loader: "css-loader",
+								options: {
+									minimize: true
+								}
 							},
 							{
 								loader: "sass-loader"
@@ -66,7 +70,8 @@ const config = {
 			$: 'jquery',
 			jquery: 'jquery'
 		}),
-		new ExtractTextWebpackPlugin('styles/styles.css')
+		new ExtractTextWebpackPlugin('styles/styles.css'),
+		new OptimizeCssAssetsWebpackPlugin()
 	],
 	devServer: {
 		port: 3000,
