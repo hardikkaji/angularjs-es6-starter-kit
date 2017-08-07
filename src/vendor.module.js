@@ -3,5 +3,5 @@
  * directly included in vendor.bundle.js file.
  */
 import 'jquery';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap-sass/assets/javascripts/bootstrap.min.js';
 import 'angular-ui-router';
