@@ -14,7 +14,7 @@ const config = {
 		]
 	},
 	output: {
-		filename: '[name].bundle.js',
+		filename: 'libs/[name].bundle.js',
 		path: path.resolve(__dirname, 'build')
 	},
 	module: {
@@ -38,8 +38,20 @@ const config = {
 				})
 			},
 			// for fixing of loading bootstrap icon files
-			{ test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/, loader: 'url-loader?limit=10000'},
-			{ test: /\.(eot|ttf)$/, loader: 'file-loader' },
+			{
+				test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+				loader: 'url-loader?limit=10000',
+				options: {
+					name: './fonts/[name].[ext]'
+				}
+			},
+			{
+				test: /\.(eot|ttf)$/,
+				loader: 'file-loader',
+				options: {
+					name: './fonts/[name].[ext]'
+				}
+			},
 			{ test: /\.html$/, loader: 'html-loader' }
 		]
 	},
@@ -47,7 +59,7 @@ const config = {
 		new webpack.optimize.UglifyJsPlugin(), // for mifiying js
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor',
-			filename: '[name].bundle.js'
+			filename: 'libs/[name].bundle.js'
 		}),
 		new CleanWebpackPlugin('build'),
 		new HtmlWebpackPlugin({
@@ -58,7 +70,7 @@ const config = {
 			$: 'jquery',
 			jquery: 'jquery'
 		}),
-		new ExtractTextWebpackPlugin('styles.css')
+		new ExtractTextWebpackPlugin('styles/styles.css')
 	],
 	devServer: {
 		port: 3000,
