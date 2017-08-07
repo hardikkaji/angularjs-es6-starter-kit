@@ -56,7 +56,9 @@ const config = {
 		]
 	},
 	plugins: [
-		new webpack.optimize.UglifyJsPlugin(), // for mifiying js
+		new webpack.optimize.UglifyJsPlugin({
+			comments: false
+		}), // for mifiying js
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor',
 			filename: 'libs/[name].bundle.js'
