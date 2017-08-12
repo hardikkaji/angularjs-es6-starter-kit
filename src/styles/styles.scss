@@ -2,7 +2,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 /*===========================================
-==== Loading Custom Styles and Variables ====
+===== Loading Custom Setup of Variables =====
 =============================================*/
 @import 'vars/typography';
 @import 'vars/navbar';
@@ -16,7 +16,13 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 /*===========================================
 ========= Loading Customize Styles ==========
 =============================================*/
-@import 'elements/navbar';
+// loading variables
+@import 'vars/checkbox';
+
+// loading blocks
 @import 'blocks/body';
+
+// loading elements
+@import 'elements/navbar';
 @import 'elements/accordian-toggle';
 @import 'elements/checkbox';
