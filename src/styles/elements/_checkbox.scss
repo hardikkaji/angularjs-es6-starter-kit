@@ -1,0 +1,26 @@
+.checkbox-new {
+	& input[type=checkbox] {
+		display: none; // hiding checkbox
+		& + label:before {
+			font-family: 'Glyphicons Halflings';
+			display: inline-block;
+			content: " ";
+			height: 25px;
+			width: 25px;
+			background-color: #ddd;
+			margin-right: 5px;
+			vertical-align: middle;
+			border-radius: $border-radius-large * 2; // ~12px
+			// border-color: #000;
+			border: 1px solid #000;
+		};
+		&:checked + label:before {
+			content: "\e013";
+			background-color: $application-navbar-color;
+			padding-top: $padding-base-vertical/2; // ~3px
+			padding-left: $padding-base-vertical - 1; // ~5px
+			color: white;
+			border: none;
+		};
+	};
+};
