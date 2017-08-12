@@ -77,7 +77,8 @@ const config = {
 	],
 	devServer: {
 		port: 3000,
-		contentBase: './src/'
+		contentBase: './src/',
+		historyApiFallback: true
 	}
 };
 
