@@ -1,4 +1,4 @@
-import template from './wt-header.html';
+import template from './header.html';
 
 export default {
 	template: template

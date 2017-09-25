@@ -1,6 +1,6 @@
 import homeComponent from './home.component';
 
-const homeModule = angular.module('wt-home', []);
+const homeModule = angular.module('app.home', []);
 
 // loading components, services, directives, specific to this module.
 homeModule.component('home', homeComponent);

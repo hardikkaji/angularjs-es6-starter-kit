@@ -7,7 +7,7 @@ const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plug
 
 const config = {
 	entry: {
-		'webpack-tutorial': './src/app.module.js',
+		'app': './src/app.module.js',
 		'vendor': './src/vendor.module.js'
 	},
 	output: {

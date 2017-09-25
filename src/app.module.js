@@ -2,7 +2,7 @@
 import styles from './styles/styles.scss';
 
 // making sure my files load so we need to import each module here.
-import './components/wt-header';
+import './components/header';
 import './components/home';
 import './components/user';
 import routerHelper from './services/router-helper/router-helper.service';
@@ -12,9 +12,9 @@ const appModule = angular
 		// 3rd party modules
 		'ui.router',
 		// application specific modules
-		'wt-header',
-		'wt-home',
-		'wt-user'
+		'app.header',
+		'app.home',
+		'app.user'
 	]);
 
 //configuring all routes via `routerHelper`
