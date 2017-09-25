@@ -1,6 +1,6 @@
-# webpack-tutorials
+# AngularJS ES6 Starter Kit
 
-This repo contains `webpack`, `angular` and `ES6` related tuorials.
+This repo contains `webpack`, `AngularJS` and `ES6` starter kit.
 
 ### Prerequisites
 Node 6.x.x, Yarn

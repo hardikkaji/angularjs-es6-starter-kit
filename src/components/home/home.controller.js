@@ -6,7 +6,7 @@ export default class HomeController {
 	}
 
 	$onInit = () => {
-		this.heading = 'Welcome to Webpack Tutorials';
+		this.heading = 'Welcome to AngularJS ES6 Starter-Kit';
 		this.$log.info('Activated Home View.');
 	};
 }

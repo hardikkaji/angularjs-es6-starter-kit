@@ -8,7 +8,7 @@ import './components/user';
 import routerHelper from './services/router-helper/router-helper.service';
 
 const appModule = angular
-	.module('webpack-tutorial', [
+	.module('angularjs-es6-starter-kit', [
 		// 3rd party modules
 		'ui.router',
 		// application specific modules
