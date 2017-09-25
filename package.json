@@ -8,6 +8,9 @@
     "build": "webpack --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "url": "https://github.com/hardikkaji/angularjs-es6-starter-kit.git"
+  },
   "keywords": [],
   "author": "Hardik Kaji",
   "license": "ISC",
