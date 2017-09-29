@@ -1,14 +1,15 @@
 // for loading styles we need to load main scss file
 import styles from './styles/styles.scss';
 
-// making sure my files load so we need to import each module here.
-import './components/header';
-import './components/home';
-import './components/user';
-import routerHelper from './services/router-helper/router-helper.service';
+// loading shared module
+import './services/core.module';
+// loading all module components
+import './app.components';
 
 const appModule = angular
 	.module('angularjs-es6-starter-kit', [
+		// shared module
+		'app.core',
 		// 3rd party modules
 		'ui.router',
 		// application specific modules
@@ -16,8 +17,5 @@ const appModule = angular
 		'app.home',
 		'app.user'
 	]);
-
-//configuring all routes via `routerHelper`
-appModule.config(routerHelper);
 
 export default appModule;
