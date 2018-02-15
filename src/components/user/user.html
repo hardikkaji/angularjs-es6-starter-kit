@@ -1,3 +1,22 @@
 <div class="container">
 	<h1>User View</h1>
+	<!-- {{$ctrl.users}} -->
+	<table class="table table-bordered">
+		<thead>
+			<th>Name</th>
+			<th>Username</th>
+			<th>Email</th>
+			<th>Website</th>
+			<th>Company</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in $ctrl.users">
+				<td>{{user.name}}</td>
+				<td>{{user.username}}</td>
+				<td><a href="mailto:{{user.email}}">{{user.email}}</a></td>
+				<td>{{user.website}}</td>
+				<td>{{user.company.name}}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
