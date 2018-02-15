@@ -10,6 +10,7 @@ const config = {
 		'app': './src/app.module.js',
 		'vendor': './src/vendor.module.js'
 	},
+	devtool: 'source-map',
 	output: {
 		filename: 'libs/[name].bundle.js',
 		path: path.resolve(__dirname, 'build')
@@ -57,7 +58,8 @@ const config = {
 	},
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
-			comments: false
+			comments: false,
+			sourceMap: true,
 		}), // for mifiying js
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor',
