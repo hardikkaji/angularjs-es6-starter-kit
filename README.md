@@ -1,6 +1,6 @@
 # AngularJS ES6 Starter Kit
 
-This repo contains `webpack`, `AngularJS`, `ES6` and `Bootstrap 3`starter kit.
+This repo contains `webpack`, `AngularJS`, `ES6` and `Bootstrap 4`starter kit.
 
 ### Prerequisites
 Node 6.x.x, Yarn
@@ -37,3 +37,7 @@ Folks, if you want to enable debugging with VSCode then you need to create `laun
 ```
 
 After adding these tasks, you need to run first debug task and then launch chrome task.
+
+
+### Known Issue
+Still checkbox is broken. I will fix it soon. If you feel to fix it, Please open PR.
