@@ -1,5 +1,7 @@
-// for fixing of loading bootstrap icon files
-// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// for loading font-awesome icons
+$fa-font-path: '~font-awesome/fonts/';
+
+@import '~font-awesome/scss/font-awesome';
 
 /*===========================================
 ===== Loading Custom Setup of Variables =====

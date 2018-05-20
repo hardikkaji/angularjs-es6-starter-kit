@@ -37,7 +37,3 @@ Folks, if you want to enable debugging with VSCode then you need to create `laun
 ```
 
 After adding these tasks, you need to run first debug task and then launch chrome task.
-
-
-### Known Issue
-Still checkbox is broken. I will fix it soon. If you feel to fix it, Please open PR.

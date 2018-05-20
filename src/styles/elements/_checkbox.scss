@@ -2,7 +2,7 @@
 	& input[type=checkbox] {
 		display: none; // hiding checkbox
 		& + label:before {
-			font-family: 'Glyphicons Halflings';
+			font-family: 'FontAwesome';
 			display: inline-block;
 			content: " ";
 			height: $app-checkbox-height;
@@ -14,9 +14,8 @@
 			border: $app-checkbox-border;
 		};
 		&:checked + label:before {
-			content: "\e013";
-			background-color: red;
-			padding-top: $app-checkbox-checked-padding-top;
+			content: "\f00c";
+			background-color: $blue;
 			padding-left: $app-checkbox-checked-padding-left;
 			color: $app-checkbox-checked-color;
 			border: $app-checkbox-checked-border;

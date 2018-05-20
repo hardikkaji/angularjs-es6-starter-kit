@@ -1,14 +1,14 @@
-.panel-heading {
+.card-header {
 	.accordion-toggle {
 		&:after{
-			/* symbol for "opening" panels */
-			font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
-			content: "\e113";    /* adjust as needed, taken from bootstrap.css */
+			/* symbol for "opening" cards */
+			font-family: 'FontAwesome';  /* essential for enabling glyphicon */
+			content: "\f077";    /* adjust as needed, taken from bootstrap.css */
 			float: right;        /* adjust as needed */
 		}
 		&.collapsed:after {
-			/* symbol for "collapsed" panels */
-			content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+			/* symbol for "collapsed" cards */
+			content: "\f078";    /* adjust as needed, taken from bootstrap.css */
 		}
 	}
 }
