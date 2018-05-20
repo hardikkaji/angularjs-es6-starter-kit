@@ -15,7 +15,7 @@
 		};
 		&:checked + label:before {
 			content: "\e013";
-			background-color: $application-navbar-color;
+			background-color: red;
 			padding-top: $app-checkbox-checked-padding-top;
 			padding-left: $app-checkbox-checked-padding-left;
 			color: $app-checkbox-checked-color;
