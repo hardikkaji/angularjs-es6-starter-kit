@@ -3,7 +3,7 @@
 This repo contains `webpack`, `AngularJS`, `ES6` and `Bootstrap 4`starter kit.
 
 ### Prerequisites
-Node 6.x.x, Yarn
+Node >= 6.x.x  node <= 8.x.x, Yarn
 
 ### Steps to run project
 1. Clone Project.
