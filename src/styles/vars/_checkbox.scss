@@ -1,12 +1,13 @@
 // checkbox related variables
+$app-checkbox-base: 6px;
 $app-checkbox-height: 25px;
 $app-checkbox-width: 25px;
 $app-checkbox-background-color: #ddd;
-$app-checkbox-right-margin: 6 - 1; // ~5px
-$app-checkbox-border-radius: 24 * 2; // 12px
+$app-checkbox-right-margin: $app-checkbox-base - 1; // ~5px
+$app-checkbox-border-radius: $app-checkbox-base * 2; // 12px
 $app-checkbox-border: 1px solid #000;
 
-$app-checkbox-checked-padding-top: 6 / 2; // ~3px
-$app-checkbox-checked-padding-left: 6 - 1; // ~5px
+$app-checkbox-checked-padding-top: $app-checkbox-base / 2; // ~3px
+$app-checkbox-checked-padding-left: $app-checkbox-base - 1; // ~5px
 $app-checkbox-checked-color: white;
 $app-checkbox-checked-border: none;
