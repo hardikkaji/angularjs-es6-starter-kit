@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const devMode = process.env.NODE_ENV !== 'production'
 
 const config = {
@@ -50,6 +51,14 @@ const config = {
 			{ test: /\.html$/, loader: 'html-loader' }
 		]
 	},
+	optimization: {
+		minimizer: [
+			new UglifyJsPlugin({
+				cache: true,
+			}),
+			new OptimizeCssAssetsWebpackPlugin({})
+		]
+	},
 	plugins: [
 		new CleanWebpackPlugin('build'),
 		new HtmlWebpackPlugin({ template: './src/index.html' }),
@@ -61,8 +70,7 @@ const config = {
 		new MiniCssExtractPlugin({
 			filename: "styles/[name].[hash].css",
 			chunkFilename: "styles/[id].[hash].css"
-		}),
-		new OptimizeCssAssetsWebpackPlugin({}),
+		})
 	],
 	devServer: {
 		port: 3000,
