@@ -1,5 +1,7 @@
 .card-header {
 	.accordion-toggle {
+		cursor: pointer;
+
 		&:after{
 			/* symbol for "opening" cards */
 			font-family: 'FontAwesome';  /* essential for enabling glyphicon */
