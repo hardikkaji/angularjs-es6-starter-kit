@@ -29,7 +29,7 @@
     "html-webpack-plugin": "5.3.1",
     "mini-css-extract-plugin": "1.6.0",
     "ng-annotate-loader": "0.6.1",
-    "node-sass": "4.5.3",
+    "node-sass": "4.13.1",
     "optimize-css-assets-webpack-plugin": "6.0.0",
     "sass-loader": "6.0.6",
     "style-loader": "^0.23.1",
