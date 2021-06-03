@@ -1,10 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const devMode = process.env.NODE_ENV !== 'production'
 
 const config = {
@@ -22,10 +22,11 @@ const config = {
 		rules: [
 			{
 				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: ['ng-annotate-loader', 'babel-loader']
+				include: [path.resolve(__dirname, 'src')],
+				use: [ { loader: 'ng-annotate-loader'}, { loader: 'babel-loader'}]
 			},
 			{
+
 				test: /\.(scss)$/,
 				use: [
 					devMode ? { loader: "style-loader" } : MiniCssExtractPlugin.loader,
@@ -35,32 +36,40 @@ const config = {
 			},
 			// for fixing of loading bootstrap icon files
 			{
-				test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
-				loader: 'url-loader?limit=10000',
-				options: {
-					name: './fonts/[name].[ext]'
-				}
+				test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf)$/i,
+				use: [{
+					loader: 'url-loader',
+					options: {
+						limit: 10000,
+						outputPath: 'fonts/',
+                        publicPath: '../fonts/',
+						esModule: false,
+					}
+				}],
 			},
 			{
 				test: /\.(eot|ttf)$/,
-				loader: 'file-loader',
-				options: {
-					name: './fonts/[name].[ext]'
-				}
+				use: [{
+					loader: 'file-loader',
+					options: {
+						outputPath: 'fonts/',
+                        publicPath: '../fonts/',
+						esModule: false,
+					}
+				}],
 			},
 			{ test: /\.html$/, loader: 'html-loader' }
 		]
 	},
 	optimization: {
+		minimize: true,
 		minimizer: [
-			new UglifyJsPlugin({
-				cache: true,
-			}),
+			new TerserPlugin(),
 			new OptimizeCssAssetsWebpackPlugin({})
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin('build'),
+		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({ template: './src/index.html' }),
 		new webpack.ProvidePlugin({
 			jQuery: 'jquery',
@@ -68,15 +77,16 @@ const config = {
 			jquery: 'jquery'
 		}),
 		new MiniCssExtractPlugin({
-			filename: "styles/[name].[hash].css",
-			chunkFilename: "styles/[id].[hash].css"
+			filename: "[name].[fullhash].css",
+			chunkFilename: "[id].[fullhash].css"
 		})
 	],
 	devServer: {
 		port: 3000,
 		contentBase: './src/',
 		historyApiFallback: true
-	}
+	},
+	devtool: 'source-map',
 };
 
 module.exports = config;
