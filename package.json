@@ -1,6 +1,6 @@
 {
   "name": "angularjs-es6-starter-kit",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "AngularJS aka Angular 1, ES6, Webpack Starter Kit Project which includes Bootstrap 4 also.",
   "main": "index.js",
   "scripts": {
@@ -16,11 +16,10 @@
   "author": "Hardik Kaji",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "6.26.3",
-    "babel-loader": "7.1.1",
-    "babel-plugin-transform-class-properties": "6.24.1",
-    "babel-plugin-transform-es2015-arrow-functions": "6.22.0",
-    "babel-preset-es2015": "6.24.1",
+    "@babel/core": "7.14.3",
+    "@babel/preset-env": "7.14.4",
+    "babel-loader": "8.2.2",
+    "babel-plugin-angularjs-annotate": "0.10.0",
     "clean-webpack-plugin": "3.0.0",
     "css-loader": "5.2.6",
     "css-minimizer-webpack-plugin": "^3.0.1",
@@ -29,7 +28,6 @@
     "html-loader": "2.1.2",
     "html-webpack-plugin": "5.3.1",
     "mini-css-extract-plugin": "1.6.0",
-    "ng-annotate-loader": "0.7.0",
     "node-sass": "6.0.0",
     "sass-loader": "12.0.0",
     "style-loader": "2.0.0",

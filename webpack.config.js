@@ -23,7 +23,7 @@ const config = {
 			{
 				test: /\.js$/,
 				include: [path.resolve(__dirname, 'src')],
-				use: [ { loader: 'ng-annotate-loader'}, { loader: 'babel-loader'}]
+				use: [ { loader: 'babel-loader'} ]
 			},
 			{
 
